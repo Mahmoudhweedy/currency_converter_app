@@ -41,13 +41,15 @@ A Flutter-based currency converter application with real-time exchange rates, hi
 - Reduces network requests
 - Smooth image loading experience
 
-## Local Database: SQLite (SQFlite)
+## Local Database: Hive
 
 ### Justification
-- Lightweight and built into Flutter
-- Offline data storage
-- Fast read/write operations
-- Works across platforms (iOS/Android)
+- Lightweight and Fast
+- Ease of Use
+- Strong Flutter Support
+- Efficient Storage
+- Customizable & Scalable
+- Encryption Support
 
 ## Dependency Injection: get_it
 
