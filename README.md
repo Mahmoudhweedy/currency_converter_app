@@ -1,16 +1,70 @@
-# currency_converter_app
+# Currency Converter Flutter App
 
-A new Flutter project.
+## Project Overview
+A Flutter-based currency converter application with real-time exchange rates, historical data, and local caching.
 
-## Getting Started
+## Building the Project
 
-This project is a starting point for a Flutter application.
+### Prerequisites
+- Flutter SDK (latest stable version)
+- Dart SDK
+- Android Studio / VS Code with Flutter extensions
 
-A few resources to get you started if this is your first Flutter project:
+### Setup Steps
+1. Clone the repository
+2. Run `flutter pub get`
+3. Run `flutter pub run build_runner build`
+4. Connect a device or start an emulator
+5. Run `flutter run`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Architecture: Clean Architecture
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Justification
+- **Separation of Concerns**: Divides the project into layers (presentation, domain, data)
+- **Testability**: Easy to write unit tests for each layer
+- **Scalability**: Modular design allows easy feature additions
+- **Dependency Rule**: Inner layers are independent of outer layers
+
+## State Management: BLoC Pattern
+
+### Justification
+- Reactive programming paradigm
+- Clear separation between business logic and UI
+- Easy to manage complex state transformations
+- Built-in error handling and loading states
+
+## Image Loading: CachedNetworkImage
+
+### Justification
+- Efficient image caching
+- Supports placeholders and error handling
+- Reduces network requests
+- Smooth image loading experience
+
+## Local Database: SQLite (SQFlite)
+
+### Justification
+- Lightweight and built into Flutter
+- Offline data storage
+- Fast read/write operations
+- Works across platforms (iOS/Android)
+
+## Dependency Injection: get_it
+
+### Justification
+- Lightweight DI solution
+- Reduces boilerplate code
+- Easy service locator pattern implementation
+- Supports lazy loading of dependencies
+
+## Unit Testing
+- Comprehensive test coverage for:
+  - API integration
+  - Business logic
+  - Repository implementations
+  - Bloc state management
+
+## API & Flags
+- Currency Conversion API: https://free.currencyconverterapi.com/
+- Country Flags: https://flagcdn.com/
+
